@@ -15,6 +15,6 @@
     <string name="button_division">/</string>
     <string name="button_multiplication">*</string>
     <string name="button_point">.</string>
-    <string name="button_equally">=</string>
+    <string name="button_submit">=</string>
     <string name="button_clear">Clear</string>
 </resources>
