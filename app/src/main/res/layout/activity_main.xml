@@ -16,12 +16,13 @@
         android:gravity="end"
         android:textSize="60sp"
         android:textColor="#FFFFFF"
-        android:text="0"
+        android:text="@string/button_zero"
+        android:maxLines="1"
         android:background="#111111"/>
     <LinearLayout
         android:id="@+id/firstRowLayout"
         android:layout_below="@id/result"
-        android:layout_toLeftOf="@id/buttonDivision"
+        android:layout_toLeftOf="@id/btnDivision"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content">
@@ -29,6 +30,7 @@
             android:id="@+id/btnClear"
             android:layout_weight="1"
             android:text="@string/button_clear"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -36,6 +38,7 @@
             android:id="@+id/btnPlusMinus"
             android:layout_weight="1"
             android:text="@string/button_plus_minus"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -43,6 +46,7 @@
             android:id="@+id/btnPercent"
             android:layout_weight="1"
             android:text="@string/button_percent"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -50,7 +54,7 @@
     <LinearLayout
         android:id="@+id/secondRowLayout"
         android:layout_below="@id/firstRowLayout"
-        android:layout_toLeftOf="@id/buttonMultiplication"
+        android:layout_toLeftOf="@id/btnMultiplication"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content">
@@ -58,6 +62,7 @@
             android:id="@+id/btnSeven"
             android:layout_weight="1"
             android:text="@string/button_seven"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -65,6 +70,7 @@
             android:id="@+id/btnEight"
             android:layout_weight="1"
             android:text="@string/button_eight"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -72,6 +78,7 @@
             android:id="@+id/btnNine"
             android:layout_weight="1"
             android:text="@string/button_nine"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -80,7 +87,7 @@
     <LinearLayout
         android:id="@+id/thirdRowLayout"
         android:layout_below="@id/secondRowLayout"
-        android:layout_toLeftOf="@id/buttonMinus"
+        android:layout_toLeftOf="@id/btnMinus"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content">
@@ -88,6 +95,7 @@
             android:id="@+id/btnFore"
             android:layout_weight="1"
             android:text="@string/button_for"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -95,6 +103,7 @@
             android:id="@+id/btnFive"
             android:layout_weight="1"
             android:text="@string/button_five"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -102,21 +111,24 @@
             android:id="@+id/btnSix"
             android:layout_weight="1"
             android:text="@string/button_six"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
     </LinearLayout>
      <LinearLayout
          android:id="@+id/fourthRowLayout"
-         android:layout_toLeftOf="@id/buttonPlus"
+         android:layout_toLeftOf="@id/btnPlus"
          android:layout_below="@id/thirdRowLayout"
          android:layout_width="match_parent"
          android:weightSum="3"
+         android:onClick="anyButtonClicked"
          android:gravity="center"
          android:layout_height="wrap_content">
          <Button
              android:id="@+id/btnOne"
              android:text="@string/button_one"
+             android:onClick="anyButtonClicked"
              android:layout_weight="1"
              android:layout_width="0dp"
              android:layout_height="wrap_content"
@@ -125,6 +137,7 @@
              android:id="@+id/btnTwo"
              android:layout_weight="1"
              android:text="@string/button_two"
+             android:onClick="anyButtonClicked"
              android:layout_width="0dp"
              android:layout_height="wrap_content"
              android:textSize="50sp"/>
@@ -132,6 +145,7 @@
              android:id="@+id/btnThree"
              android:layout_weight="1"
              android:text="@string/button_three"
+             android:onClick="anyButtonClicked"
              android:layout_width="0dp"
              android:layout_height="wrap_content"
              android:textSize="50sp"/>
@@ -139,7 +153,7 @@
     <LinearLayout
         android:id="@+id/fifthRowLayout"
         android:layout_below="@id/fourthRowLayout"
-        android:layout_toLeftOf="@id/buttonSubmit"
+        android:layout_toLeftOf="@id/btnSubmit"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content">
@@ -147,6 +161,7 @@
             android:id="@+id/btnZero"
             android:layout_weight="2"
             android:text="@string/button_zero"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
@@ -154,13 +169,14 @@
             android:id="@+id/btnPoint"
             android:layout_weight="1"
             android:text="@string/button_point"
+            android:onClick="anyButtonClicked"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="50sp"/>
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonDivision"
+        android:id="@+id/btnDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -168,56 +184,61 @@
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
         android:text="@string/button_division"
+        android:onClick="anyButtonClicked"
         android:textColor="#ECECEC"
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/buttonMultiplication"
+        android:id="@+id/btnMultiplication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/buttonDivision"
+        android:layout_below="@id/btnDivision"
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
         android:isScrollContainer="false"
         android:shadowColor="#FF9800"
         android:text="@string/button_multiplication"
+        android:onClick="anyButtonClicked"
         android:textColor="#ECECEC"
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/buttonMinus"
+        android:id="@+id/btnMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/buttonMultiplication"
+        android:layout_below="@id/btnMultiplication"
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
         android:text="@string/button_minus"
+        android:onClick="anyButtonClicked"
         android:textColor="#ECECEC"
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/buttonPlus"
+        android:id="@+id/btnPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/buttonMinus"
+        android:layout_below="@id/btnMinus"
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
         android:text="@string/button_plus"
+        android:onClick="anyButtonClicked"
         android:textColor="#ECECEC"
         android:textSize="50sp" />
 
     <Button
-        android:id="@+id/buttonSubmit"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/buttonPlus"
+        android:layout_below="@id/btnPlus"
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
         android:text="@string/button_submit"
+        android:onClick="anyButtonClicked"
         android:textColor="#ECECEC"
         android:textSize="50sp" />
 </RelativeLayout>
